@@ -19,16 +19,16 @@ import TheNavBar from "@/components/TheNavBar.vue";
 import TheFooter from "@/components/TheFooter.vue";
 export default {
   metaInfo: {
-    title: "Repo Remover | Cleanup your GitHub repos with ease.",
+    title: "reporemover | Cleanup your GitHub repos with ease.",
     meta: [
       {
         property: "og:title",
-        content: "Repo Remover | Cleanup your GitHub repos with ease."
+        content: "reporemover | Cleanup your GitHub repos with ease."
       },
       {
         name: "description",
         content:
-          "Repo Remover makes it easy to archive and delete multiple GitHub repos at the same time. Free to use, and 100% open source."
+          "reporemover makes it easy to archive and delete multiple GitHub repos at the same time. Free to use, and 100% open source."
       },
       {
         poperty: "og:image",

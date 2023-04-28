@@ -6,7 +6,7 @@
           404 - Page Not Found
         </h1>
         <h2 class="subtitle">
-          We can't seem to find the page you're looking for.
+          我们似乎找不到您要查找的页面。
         </h2>
 
         <p>
@@ -19,7 +19,7 @@
               icon="chevron-circle-left"
               size="is-small"
             />
-            <span>Go Home</span>
+            <span>返回</span>
           </router-link>
         </p>
       </div>

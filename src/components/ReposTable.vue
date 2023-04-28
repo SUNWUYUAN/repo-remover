@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <h2 class="title">
-      Select Repos to Modify
+      选择要修改的仓库
     </h2>
 
     <h3 class="title is-5 is-hidden-tablet">
-      Search Filters
+      搜索筛选
     </h3>
     <!-- Table Filter/Paging  -->
     <div class="columns is-multiline">
@@ -17,16 +17,16 @@
             expanded
           >
             <option value="5">
-              5 per page
+              每页5个
             </option>
             <option value="10">
-              10 per page
+              每页10个
             </option>
             <option value="15">
-              15 per page
+              每页15个
             </option>
             <option value="20">
-              20 per page
+              每页20个
             </option>
           </b-select>
         </b-field>
@@ -49,7 +49,7 @@
                 class="has-text-grey"
                 size="is-small"
               />
-              Private
+              私有的
             </b-switch>
           </div>
           <div class="control is-flex">
@@ -63,7 +63,7 @@
                 class="has-text-grey"
                 size="is-small"
               />
-              Archived
+              已存档
             </b-switch>
           </div>
           <div class="control is-flex">
@@ -77,7 +77,7 @@
                 class="has-text-grey"
                 size="is-small"
               />
-              Forked
+              分叉
             </b-switch>
           </div>
           <div class="control is-flex">
@@ -91,7 +91,7 @@
                 class="has-text-grey"
                 size="is-small"
               />
-              Organization
+              组织
             </b-switch>
           </div>
         </b-field>
@@ -104,14 +104,14 @@
             v-model="searchFilter"
             type="search"
             icon="search"
-            placeholder="Enter keywords..."
+            placeholder="输入以搜索"
           />
         </b-field>
       </div>
     </div>
 
     <h3 class="title is-5 is-hidden-tablet">
-      Results Table
+      结果表
     </h3>
     <!-- Repo Table -->
     <b-table
@@ -139,7 +139,7 @@
                 size="is-large"
               />
             </p>
-            <p>Hmm. It looks like you have no repos.</p>
+            <p>看起来你没有仓库</p>
           </div>
         </section>
       </template>
@@ -151,7 +151,7 @@
         <b-table-column
           sortable
           field="name"
-          label="Name"
+          label="名称"
         >
           <div class="repo__header">
             <h5 class="repo__header__title has-text-weight-bold	is-size-5">
@@ -163,7 +163,7 @@
             <small
               v-if="props.row.parent"
             >
-              Forked from
+            分叉自
               <a
                 :href="props.row.parent.url"
                 class="text-dark"
@@ -173,7 +173,7 @@
             </small>
 
             <small v-if="props.row.viewerCanAdminister && props.row.owner.__typename && props.row.owner.__typename == 'Organization'">
-              Owned by
+              属于
               <a
                 :href="props.row.owner.url"
                 class="text-dark"
@@ -188,25 +188,25 @@
                 v-if="props.row.isFork"
                 class="is-info"
               >
-                Forked
+                分叉
               </b-tag>
               <b-tag
                 v-if="props.row.isPrivate"
                 class="is-dark"
               >
-                Private
+                私有的
               </b-tag>
               <b-tag
                 v-if="props.row.isArchived"
                 class="is-dark"
               >
-                Archived
+                已存档
               </b-tag>
               <b-tag
                 v-if="props.row.viewerCanAdminister && props.row.owner.__typename && props.row.owner.__typename == 'Organization'"
                 class="is-dark"
               >
-                Organization Owned
+              拥有的组织
               </b-tag>
             </b-taglist>
           </div>
@@ -219,7 +219,7 @@
         <!-- Last Edited -->
         <b-table-column
           sortable
-          label="Last Updated"
+          label="上次更新时间"
           field="updatedAt"
         >
           <small class="is-capitalized">
@@ -244,9 +244,8 @@
                 :icon="showDelete ? 'trash' : 'archive'"
               />
               <span class="has-text-weight-bold">
-                {{ showDelete ? "Delete" : "Archive" }} <span class="is-hidden-mobile">
-                  Selected
-                </span> Repos
+                {{ showDelete ? "删除" : "存档" }} <span class="is-hidden-mobile">选择的
+                </span>仓库
               </span>
             </button>
           </p>
@@ -268,13 +267,13 @@
                 v-if="!showDelete"
                 @click="toggleShowDelete"
               >
-                Delete Repos
+              删除仓库
               </b-dropdown-item>
               <b-dropdown-item
                 v-if="showDelete"
                 @click="toggleShowDelete"
               >
-                Archive Repos
+                存档仓库
               </b-dropdown-item>
             </b-dropdown>
           </p>
@@ -332,7 +331,7 @@ export default {
     },
 
     repoActionButtonText() {
-      return (this.showDelete ? "Delete" : "Archive") + " Repos";
+      return (this.showDelete ? "删除" : "存档") + " 仓库";
     },
 
     reposProvider() {

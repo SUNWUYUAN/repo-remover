@@ -3,17 +3,19 @@
     <section class="padded">
       <div class="container">
         <h1 class="title is-size-1">
-          About
+          关于
         </h1>
 
         <div class="content">
           <p class="lead">
-            Repo Remover makes it easy to archive and delete multiple GitHub Repos with a single click.
+            这是 <a href="https://wuyuan.dev">孙悟元</a> 的汉化版，以下是原始简介
+          </p>   <br/><br/><br/> <p class="lead">
+            reporemover makes it easy to archive and delete multiple GitHub Repos with a single click.
           </p>
 
           <p>
             <!-- eslint-disable vue/singleline-html-element-content-newline -->
-            In order to use Repo Remover, a <a href="https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line">
+            In order to use reporemover, a <a href="https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line">
               Personal Access Token
             </a> is required. The token is used with the GitHub API to get a list of your personal repositories, and make changes to them.
             <!-- eslint-enable vue/singleline-html-element-content-newline -->
@@ -32,13 +34,13 @@
           <p>
             <span class="tag is-info">
               Note:
-            </span> Personal Access Tokens are not stored or saved in any way. For optimal security, we suggest you create a new token each time you use Repo Remover, and delete it when you are done.
+            </span> Personal Access Tokens are not stored or saved in any way. For optimal security, we suggest you create a new token each time you use reporemover, and delete it when you are done.
           </p>
         </div>
 
         <div class="content">
           <h3>
-            Repo Remover was made with:
+            reporemover was made with:
           </h3>
           <ul class="text-dark">
             <li>
@@ -73,7 +75,7 @@
         </div>
         <div class="content">
           <p>
-            Repo Remover is hosted on
+            reporemover is hosted on
             <a href="https://now.sh/">
               ZEIT Now
             </a>.
@@ -84,13 +86,13 @@
 
         <div class="content">
           <h2>Disclaimer</h2>
-          <p>Repo Remover is provided as is, and we make no promises or guarantees about this service.</p>
+          <p>reporemover is provided as is, and we make no promises or guarantees about this service.</p>
 
           <h3>
             Use at your own risk:
           </h3>
           <p>
-            Changes made with Repo Remover are permanent and cannot be reversed.
+            Changes made with reporemover are permanent and cannot be reversed.
 
             Any repos you <span class="tag is-warning">
               archive
@@ -102,7 +104,7 @@
             </span> <b> cannot be un-deleted</b>. Please be careful and make sure you understand what you are doing.
           </p>
           <p class="is-underlined">
-            Repo Remover is not liable for any damages or losses arising from your use or inability to use the service.
+            reporemover is not liable for any damages or losses arising from your use or inability to use the service.
           </p>
         </div>
 
@@ -115,7 +117,7 @@
             icon="chevron-circle-left"
             size="is-small"
           />
-          <span>Go Back</span>
+          <span>返回</span>
         </router-link>
       </div>
     </section>
@@ -125,11 +127,11 @@
 <script>
 export default {
   metaInfo: {
-    title: "About Repo Remover | Cleanup your GitHub repos with ease.",
+    title: "About reporemover | Cleanup your GitHub repos with ease.",
     meta: [
       {
         property: "og:title",
-        content: "About Repo Remover | Cleanup your GitHub repos with ease."
+        content: "About reporemover | Cleanup your GitHub repos with ease."
       }
     ]
   }

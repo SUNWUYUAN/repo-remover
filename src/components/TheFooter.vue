@@ -5,18 +5,18 @@
         <div class="columns">
           <div class="column is-4">
             <h4>
-              Repo Remover by
+              仓库删除 by
               <!-- eslint-disable vue/multiline-html-element-content-newline -->
               <a
-                href="https://twitter.com/zmoolla"
-              >Zaahir&nbsp;Moolla</a>.
+                href="https://wuyuan.dev"
+              >孙悟元</a>.
             <!-- eslint-enable vue/multiline-html-element-content-newline -->
             </h4>
             <!-- eslint-disable vue/singleline-html-element-content-newline -->
             <p>
-              Trash favicon and icon by <a href="https://icons8.com">Icons8</a>.
+              垃圾箱收藏夹和图标来自 <a href="https://icons8.com">Icons8</a>.
               <br>
-              Source code licensed under <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.
+              这是根据 <a href="https://opensource.org/licenses/mit-license.php">MIT</a> 许可的源代码.
             </p>
             <!-- eslint-enable vue/singleline-html-element-content-newline -->
             <p>
@@ -25,10 +25,10 @@
           </div>
           <div class="column is-narrow-tablet is-4-desktop">
             <h4>
-              Contribute on GitHub
+              在GitHub上贡献
             </h4>
             <iframe
-              src="https://ghbtns.com/github-btn.html?user=moollaza&repo=repo-remover&type=star&count=true&size=large"
+              src="https://ghbtns.com/github-btn.html?user=sunwuyuan&repo=repo-remover&type=star&count=true&size=large"
               frameborder="0"
               scrolling="0"
               width="160px"
@@ -36,7 +36,7 @@
               class="gh-btn-frame"
             />
             <iframe
-              src="https://ghbtns.com/github-btn.html?user=moollaza&type=follow&count=true&size=large"
+              src="https://ghbtns.com/github-btn.html?user=sunwuyuan&type=follow&count=true&size=large"
               frameborder="0"
               scrolling="0"
               width="220px"
@@ -44,9 +44,9 @@
               class="gh-btn-frame"
             />
           </div>
-          <div class="column is-narrow">
+         <!-- <div class="column is-narrow">
             <h4>
-              Share
+              分享
             </h4>
 
             <ul class="footer__links">
@@ -91,7 +91,7 @@
                 </a>
               </li>
             </ul>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>

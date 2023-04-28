@@ -5,10 +5,10 @@
         id="get-started"
         class="title is-1"
       >
-        Get Started
+        开始
       </p>
       <p class="subtitle is-3">
-        Cleaning up repos has never been quicker, or easier!
+        清理仓库从来没有这么快或这么容易！
       </p>
 
       <div class="columns">
@@ -20,16 +20,16 @@
                   1
                 </div>
               </div>
-              Get a Personal Access Token from GitHub
+              从GitHub获取个人访问令牌
             </h3>
 
             <div class="content">
               <ol>
-                <li>Click the button below to visit GitHub.com in a new window.</li>
+                <li>单击下面的按钮，在新窗口中访问GitHub.com。</li>
                 <li>
-                  Scroll to the bottom and click <b>Generate token</b>.
+                  滚动到底部并单击 <b>生成令牌</b>.
                 </li>
-                <li>Copy the generated token and paste it below.</li>
+                <li>复制生成的令牌并将其粘贴到下面。</li>
               </ol>
             </div>
 
@@ -43,7 +43,7 @@
                 size="is-small"
               />
               <span>
-                Get my token
+                获取令牌
               </span>
             </a>
           </div>
@@ -55,17 +55,17 @@
                   2
                 </div>
               </div>
-              Select repositories to modify
+              选择存储库
             </h3>
             <b-field
-              label="Please enter your Personal Access Token"
+              label="请输入您的个人访问令牌"
               :message="tokenInputMessage"
               :type="tokenInputType"
             >
               <b-input
                 v-model="$root.$data.token"
                 required
-                placeholder="Personal Access Token"
+                placeholder="个人访问令牌"
                 minlength="40"
                 maxlength="40"
                 autocomplete="false"
@@ -79,8 +79,8 @@
             </b-field>
             <small>
               <span class="tag is-info">
-                Note:
-              </span> Tokens are not saved. For security, you should delete the token after use.
+                放心使用：
+              </span> 我们不会上传或不会保存你的令牌，但为了安全起见，您应该在使用后删除令牌。
             </small>
           </div>
 
@@ -90,7 +90,7 @@
             type="is-primary"
             @click="onSubmit"
           >
-            Continue
+            确定
           </b-button>
         </div>
       </div>
@@ -146,13 +146,13 @@ export default {
       if (!validity.valid) {
         if (validity.tooShort || validity.tooLong) {
           target.setCustomValidity(
-            "Personal Access Token must be exactly 40 characters long"
+            "个人访问令牌的长度必须恰好为40个字符"
           );
         }
 
         if (validity.patternMismatch) {
           target.setCustomValidity(
-            "Personal Access Token should only include letters and numbers."
+            "个人访问令牌应仅包括字母和数字。"
           );
         }
       } else {
@@ -165,7 +165,7 @@ export default {
       return {
         context: {
           headers: {
-            "User-Agent": "Repo Remover"
+            "User-Agent": "wuyuan"
           }
         },
         query: require("@/graphql/GitHubViewer.gql"),
@@ -176,7 +176,7 @@ export default {
             this.tokenInputType = "is-success";
             this.tokenIsLoading = false;
             this.$root.$data.login = data.viewer.login;
-            this.tokenInputMessage = "Success! This token is valid";
+            this.tokenInputMessage = "成功！此令牌有效";
           }
         },
         // Error handling
@@ -184,7 +184,7 @@ export default {
           this.hasTokenError = true;
           this.tokenInputType = "is-danger";
           this.tokenInputMessage =
-            "Error: This token appears to be invalid. Please verify token is correct";
+            "错误：此令牌似乎无效。请验证令牌是否正确";
         },
         skip() {
           return true;

@@ -10,7 +10,7 @@
           to="/"
           class="navbar-item has-text-weight-bold is-size-4"
         >
-          Repo Remover
+          仓库删除
         </router-link>
 
         <!-- Hamburger Menu -->
@@ -39,15 +39,15 @@
             to="/"
             class="navbar-item"
           >
-            Home
+            主页
           </router-link>
           <router-link
             to="/about"
             class="navbar-item"
           >
-            About
+            关于
           </router-link>
-          <div
+        <!--  <div
             v-if="showGenerateButton"
             class="navbar-item"
           >
@@ -57,14 +57,14 @@
             >
               Generate More Repos
             </button>
-          </div>
+          </div>-->
         </div>
 
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="field is-grouped">
               <p class="control">
-                <a
+               <!-- <a
                   class="button is-outlined is-twitter"
                   target="_blank"
                   href="https://twitter.com/intent/tweet?url=https%3A%2F%2Freporemover.xyz&text=Repo%20Remover%3A%20Easily%20delete%20and%20archive%20multiple%20GitHub%20repos%20at%20once%20with%20Repo%20Remover!%20via%20%40zmoolla"
@@ -75,20 +75,20 @@
                   />
                   <span>Tweet</span>
                 </a>
-              </p>
+              </p>-->
               <p class="control">
                 <a
                   class="button is-light"
-                  href="https://github.com/moollaza/repo-remover"
+                  href="https://github.com/sunwuyuan/repo-remover"
                 >
                   <b-icon
                     icon="github"
                     pack="fab"
                   />
-                  <span>Project</span>
+                  <span>Github</span>
                 </a>
               </p>
-              <p class="control">
+            <!-- <p class="control">
                 <a
                   href="mailto:hello@reporemover.xyz?subject=Hello! I have some feedback..."
                   class="button is-light"
@@ -98,7 +98,7 @@
                   />
                   <span>Feedback</span>
                 </a>
-              </p>
+              </p>-->
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@ export default {
         this.$root.$emit("reload-table");
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.error("ERROR - Repo Creation Failed", error);
+        console.error("错误-仓库创建失败", error);
       }
     }
   }

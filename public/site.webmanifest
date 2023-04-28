@@ -1,6 +1,6 @@
 {
-    "name": "Repo Remover",
-    "short_name": "Repo Remover",
+    "name": "reporemover",
+    "short_name": "reporemover",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",

@@ -8,7 +8,7 @@
       :context="{
         headers: {
           authorization: `Bearer ${$root.$data.token}`,
-          'User-Agent': 'Repo Remover'
+          'User-Agent': 'reporemover'
         }
       }"
       :variables="{
@@ -35,8 +35,7 @@
           <section class="section">
             <div class="container">
               <b-message type="is-danger" has-icon closeable="false">
-                <b>Uh-oh!</b> We couldn't get your GitHub data. Please verify
-                your Personal Access Token is correct and try again.
+                <b>不是吧!</b> 我们无法获取您的GitHub数据。请验证您的个人访问令牌正确，请重试。
                 <router-link to="/#get-started">
                   Go Back
                 </router-link>
@@ -49,7 +48,7 @@
         <div v-else-if="data && data.user">
           <section class="section">
             <div class="container">
-              <h3 class="title is-4">Authenticated as:</h3>
+              <h3 class="title is-4">登录为:</h3>
               <UserBox :viewer="data && data.user" />
             </div>
           </section>
@@ -61,7 +60,7 @@
         </div>
 
         <!-- No result -->
-        <div v-else>No result :(</div>
+        <div v-else>无结果 :(</div>
       </template>
     </ApolloQuery>
     <!-- No Token -->
@@ -69,9 +68,8 @@
       <section class="section">
         <div class="container">
           <b-message type="is-warning" has-icon closeable="false">
-            <b>Uh-oh!</b> A token is required to get your GitHub data. Please
-            enter your Personal Access Token first.
-            <router-link to="/#get-started">Go Back</router-link>
+            <b>不是吧!</b> 获取GitHub数据需要一个令牌。请先输入您的个人访问令牌。
+            <router-link to="/#get-started">返回</router-link>
           </b-message>
         </div>
       </section>
@@ -136,7 +134,7 @@ export default {
     async getNextPage(afterCursor) {
       if (!afterCursor) {
         throw new Error(
-          "No afterCursor argument passed to getNextPage function"
+          "没有将afterCursor参数传递给getNextPage函数"
         );
       }
 
@@ -197,18 +195,18 @@ export default {
     },
 
     notifySuccess(isDeletion, amount) {
-      const action = isDeletion ? "deleted" : "archived";
+      const action = isDeletion ? "删除" : "存档";
       const numRepos = this.$options.filters.pluralize(
         amount,
-        "repos were",
-        "repo was"
+        "个仓库",
+        "个仓库"
       );
-      const message = `${numRepos} successfully ${action}`;
+      const message = `${numRepos} 成功 ${action}`;
       this.notify("success", message);
     },
 
     notifyFailure(isDeletion, failures) {
-      const action = isDeletion ? "delete" : "archive";
+      const action = isDeletion ? "删除" : "存档";
 
       failures.forEach(obj => {
         const message = `

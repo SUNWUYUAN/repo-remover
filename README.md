@@ -17,13 +17,13 @@
 ![RepoRemover Selection UI](./src/assets/img/reporemover-demo.gif)
 
 ## How it works
-Repo Remover uses [Personal Access Token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) along with the GitHub API to get a list of your personal repositories, and make changes to them.
+reporemover uses [Personal Access Token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) along with the GitHub API to get a list of your personal repositories, and make changes to them.
 
 Once you've provided a Personal Access Token, you can select which of your repos to modify, set the selected repos to be either archived or deleted, and then click the button to make the changes!
 
 Before any changes are made, you will be asked to review the list of selected repos, and confirm your decision.
 
-**Note**: Personal Access Tokens are not stored or saved in any way. For optimal security, we suggest you create a new token each time you use Repo Remover, and delete it when you are done.
+**Note**: Personal Access Tokens are not stored or saved in any way. For optimal security, we suggest you create a new token each time you use reporemover, and delete it when you are done.
 
 ## Run RepoRemover locally
 

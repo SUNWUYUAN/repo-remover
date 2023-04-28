@@ -7,12 +7,12 @@
           <div class="columns is-vcentered">
             <div class="column is-7">
               <h1 class="title is-size-1-touch">
-                Repo Remover
+                仓库删除
               </h1>
               <h2 class="subtitle is-size-4-touch is-3">
                 <!-- eslint-disable vue/singleline-html-element-content-newline -->
-                The <b>fastest</b> way to <span class="underline underline--yellow">archive</span>
-                or <span class="underline underline--red">delete</span> multiple GitHub repos.
+                最 <b>快速的</b>  <span class="underline underline--yellow">存档</span>
+                或 <span class="underline underline--red">删除</span> GitHub仓库.
                 <!-- eslint-enable vue/singleline-html-element-content-newline -->
               </h2>
 
@@ -22,13 +22,13 @@
                   class="button is-primary  is-medium is-rounded"
                   @click.once="onGetStartedClick"
                 >
-                  Get Started
+                  开始
                 </button>
                 <router-link
                   to="/about"
                   class="button is-text has-text-link	is-medium is-rounded"
                 >
-                  Learn More
+                  了解更多
                 </router-link>
               </div>
             </div>
@@ -46,7 +46,7 @@
       </div>
     </section>
 
-    <section class="has-background-white padded">
+   <!-- <section class="has-background-white padded">
       <div class="container">
         <div class="columns is-vcentered">
           <div class="column is-half">
@@ -77,14 +77,14 @@
               v-scroll-to="'#get-started'"
               class="button is-primary  is-medium is-rounded"
             >
-              Get started. It's free!
+              开始. It's free!
             </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Promo Section w/ Video -->
+   
     <section class="promo has-background-link padded">
       <div class="container">
         <p class="title is-1 has-text-white">
@@ -124,7 +124,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
 
     <!-- Token Form -->
     <TheTokenForm />
